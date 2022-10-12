@@ -1,10 +1,11 @@
 import React from "react";
+import "./Button.css";
 
 type ButtonProps = {
   label: string;
 };
 
 const Button = (props: ButtonProps) => {
-  return <div>{props.label}</div>;
+  return <button>{props.label}</button>;
 };
 export default Button;
