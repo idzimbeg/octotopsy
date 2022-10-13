@@ -1,0 +1,26 @@
+.spinner {
+  width: 50px;
+  --b: 8px; /* the border thickness */
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 1px;
+  background: conic-gradient(rgb(0, 0, 0, 0) 10%, rgb(255, 1, 60)) content-box;
+  -webkit-mask: repeating-conic-gradient(
+      rgb(0, 0, 0, 0) 0deg,
+      rgb(0, 0, 0) 1deg 20deg,
+      rgb(0, 0, 0, 0) 21deg 36deg
+    ),
+    radial-gradient(
+      farthest-side,
+      rgb(0, 0, 0, 0) calc(100% - var(--b) - 1px),
+      rgb(0, 0, 0) calc(100% - var(--b))
+    );
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation: s4 1s infinite steps(10);
+}
+@keyframes s4 {
+  to {
+    transform: rotate(1turn);
+  }
+}

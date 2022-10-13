@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 
 import "./Card.css";
 
-type CardProps = { children: React.ReactNode; tex?: string };
+type CardProps = { children: React.ReactNode; tex?: string; label: string };
 
 const Card = (props: CardProps) => {
   const textState = ["is-loading", "is-loaded"];
   const [text, setText] = useState("");
   const [typing, setTyping] = useState(textState[0]);
-  const { children, tex } = props;
+  const { children, tex, label } = props;
   useEffect(() => {
     const timeout = setTimeout(() => {
       setText(tex!.slice(0, text.length + 1));
@@ -36,6 +36,7 @@ const Card = (props: CardProps) => {
       <div className="blinking-cursor">
         {children}
         {text}
+        {label}
       </div>
     </div>
   );

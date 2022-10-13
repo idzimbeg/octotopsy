@@ -1,21 +1,19 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Button from "./Button";
+import Spinner from "../components/Spinner/Spinner";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "OctoTopsy/Button",
-  component: Button,
-} as ComponentMeta<typeof Button>;
+  title: "OctoTopsy/Spinner",
+  component: Spinner,
+} as ComponentMeta<typeof Spinner>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (
-  args: JSX.IntrinsicAttributes & { label: string }
-) => <Button {...args} />;
+const Template: ComponentStory<typeof Spinner> = (
+  args: JSX.IntrinsicAttributes & { label?: string }
+) => <Spinner {...args} />;
 
-export const OctoTopsyButton = Template.bind({});
+export const OctoTopsySpinner = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-OctoTopsyButton.args = {
-  label: "OctoTopsy",
-};
+OctoTopsySpinner.args = {};

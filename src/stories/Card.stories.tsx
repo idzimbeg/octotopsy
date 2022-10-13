@@ -1,11 +1,11 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Card from "./Card";
+import Card from "../components/Card/Card";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "OctoTopsy/Button",
+  title: "OctoTopsy/Card",
   component: Card,
 } as ComponentMeta<typeof Card>;
 
@@ -24,4 +24,5 @@ export const OctoTopsyCard = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 OctoTopsyCard.args = {
   children: <div />,
+  label: "",
 };
