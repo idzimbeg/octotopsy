@@ -1,9 +1,14 @@
 import React from "react";
+import clsx from "clsx";
+
 import "./Spinner.css";
 
-type Props = {};
+type SpinnerProps = {
+  label?: string;
+  className: string | undefined;
+};
 
-const Spinner = (props: Props) => {
-  return <div className="spinner"></div>;
+const Spinner = (props: SpinnerProps) => {
+  return <div className={clsx(`spinner ${props.className}`)}></div>;
 };
 export default Spinner;

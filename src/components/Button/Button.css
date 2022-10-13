@@ -1,5 +1,5 @@
-button,
-button::after {
+.button,
+.button::after {
   width: 150px;
   height: 76px;
   line-height: 78px;
@@ -17,7 +17,7 @@ button::after {
   touch-action: manipulation;
 }
 
-button:after {
+.button:after {
   --slice-0: inset(50% 50% 50% 50%);
   --slice-1: inset(80% -6px 0 0);
   --slice-2: inset(50% -6px 30% 0);
@@ -43,8 +43,13 @@ button:after {
   clip-path: var(--slice-0);
 }
 
-button:hover:after {
+.button:hover:after {
   animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+.button:active {
+  animation: 0.75s glitch;
   animation-timing-function: steps(2, end);
 }
 
@@ -92,14 +97,5 @@ button:hover:after {
   100% {
     clip-path: var(--slice-1);
     transform: translate(0);
-  }
-}
-
-@media (min-width: 768px) {
-  button,
-  button:after {
-    width: 200px;
-    height: 86px;
-    line-height: 88px;
   }
 }

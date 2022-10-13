@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react";
+import clsx from "clsx";
 
 import "./Card.css";
 
-type CardProps = { children: React.ReactNode; tex?: string; label: string };
+type CardProps = {
+  children: React.ReactNode;
+  tex?: string;
+  label: string;
+  className: string | undefined;
+};
 
 const Card = (props: CardProps) => {
   const textState = ["is-loading", "is-loaded"];
@@ -32,7 +38,7 @@ const Card = (props: CardProps) => {
   }, [text, typing]);
 
   return (
-    <div className="card">
+    <div className={clsx(`card ${props.className}`)}>
       <div className="blinking-cursor">
         {children}
         {text}

@@ -17,11 +17,13 @@ export default [
         file: packageJson.main,
         format: "cjs",
         sourcemap: true,
+        strict: false,
       },
       {
         file: packageJson.module,
         format: "esm",
         sourcemap: true,
+        strict: false,
       },
     ],
     plugins: [
@@ -37,6 +39,6 @@ export default [
     input: "dist/esm/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
-    external: [/\.css$/, /\.scss$/, /\.stories$/, "react", "react-dom"],
+    external: [/\.css$/, /\.scss$/, /\.stories$/],
   },
 ];

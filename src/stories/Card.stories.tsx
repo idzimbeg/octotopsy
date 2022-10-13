@@ -14,6 +14,7 @@ const Template: ComponentStory<typeof Card> = (
   args: JSX.IntrinsicAttributes & { label: string }
 ) => (
   <Card
+    className={undefined}
     tex={"Hello, my name is OctoTopsy. I am component library."}
     children={undefined}
     {...args}
