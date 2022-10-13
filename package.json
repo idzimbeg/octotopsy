@@ -1,6 +1,6 @@
 {
   "name": "@idzimbeg/octotopsy",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "React component library",
   "scripts": {
     "rollup": "rollup -c",
@@ -56,5 +56,9 @@
     "jest-environment-jsdom": "^29.1.2",
     "postcss": "^8.4.17",
     "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   }
 }
