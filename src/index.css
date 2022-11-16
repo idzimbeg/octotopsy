@@ -1,10 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .spinner {
-  width: 50px;
-  --b: 8px; /* the border thickness */
+  --b: 8px;
   aspect-ratio: 1;
   border-radius: 50%;
   padding: 1px;
-  background: conic-gradient(rgb(0, 0, 0, 0) 10%, rgb(255, 1, 60)) content-box;
   -webkit-mask: repeating-conic-gradient(
       rgb(0, 0, 0, 0) 0deg,
       rgb(0, 0, 0) 1deg 20deg,

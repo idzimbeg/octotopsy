@@ -11,8 +11,8 @@ export default {
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Spinner> = (
-  args: JSX.IntrinsicAttributes & { label?: string }
-) => <Spinner className={undefined} {...args} />;
+  args: JSX.IntrinsicAttributes & { className?: string }
+) => <Spinner size="md" center={false} className="" {...args} />;
 
 export const OctoTopsySpinner = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args

@@ -1,4 +1,6 @@
-export { default as Button } from "./Button";
-export { default as Card } from "./Card";
-export { default as Spinner } from "./Spinner";
-export { default as Input } from "./Input";
+export * from "./Button";
+export * from "./Card";
+export * from "./Spinner";
+export * from "./Inputs/Input";
+export * from "./Form";
+export * from "./Modal";

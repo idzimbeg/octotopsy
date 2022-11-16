@@ -1,22 +1,23 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-
-import { Button } from "../components/Button/Button";
+import { Modal } from "../components/Modal";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "OctoTopsy/Button",
-  component: Button,
-} as ComponentMeta<typeof Button>;
+  title: "OctoTopsy/Modal",
+  component: Modal,
+} as ComponentMeta<typeof Modal>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof Modal> = () => (
+  <Modal
+    children
+    open={true}
+    onBackdropClick={() => {}}
+    containerClassName={"red"}
+  />
+);
 
-export const OctoTopsyButton = Template.bind({});
+export const OctoTopsyModal = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-OctoTopsyButton.args = {
-  children: "Button",
-  size: "xl",
-  center: false,
-  className: "bg-red-500",
-};
+OctoTopsyModal.args = {};
