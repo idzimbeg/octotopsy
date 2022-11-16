@@ -1,6 +1,6 @@
 {
   "name": "@idzimbeg/octotopsy",
-  "version": "0.0.12",
+  "version": "0.0.15",
   "description": "React component library",
   "scripts": {
     "rollup": "rollup -c",
@@ -11,6 +11,7 @@
   "author": "Igor Dzimbeg",
   "license": "ISC",
   "dependencies": {
+    "@idzimbeg/octotopsy": "^0.0.13",
     "@storybook/addon-postcss": "^2.0.0",
     "@types/draft-js": "^0.11.9",
     "@types/draftjs-to-html": "^0.8.1",
@@ -82,6 +83,7 @@
   ],
   "types": "dist/index.d.ts",
   "publishConfig": {
+    "access": "public",
     "registry": "https://npm.pkg.github.com/idzimbeg"
   }
 }
