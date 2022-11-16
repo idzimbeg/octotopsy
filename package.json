@@ -1,6 +1,6 @@
 {
   "name": "@idzimbeg/octotopsy",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "React component library",
   "scripts": {
     "rollup": "rollup -c",
